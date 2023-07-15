@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	features="src/test/java/features" ,/*executing all feature files*/
-	glue="StepDefinitions",stepNotifications=true) //define step definiton file , no need of location , give package name
+	glue="StepDefinitions",tags="@RegTest1",stepNotifications=true) //define step definiton file , no need of location , give package name
 
 public class TestRunner {
 

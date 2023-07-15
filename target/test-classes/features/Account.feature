@@ -1,7 +1,6 @@
 Feature: Application Login
 
-Background:
-Given User is on NetBanking landing page1
+
 
 @RegTest1
 Scenario: Home page default login
@@ -10,7 +9,7 @@ When User login into application with "jin" and password "1234"
 Then Home page is populated
 And Cards displayed are "true"
 
-@SmokeTest
+@RegTest1
 Scenario: Home page default login
 Given User is on NetBanking landing page
 When User login into application with "john" and password "4321"
@@ -18,7 +17,7 @@ Then Home page is populated
 And Cards displayed are "false"
 
 
-@SmokeTest
+@RegTest1
 Scenario: Home page default login
 Given User is on NetBanking landing page
 When User login into application with follwoing details
@@ -26,6 +25,7 @@ When User login into application with follwoing details
 Then Home page is populated
 And Cards displayed are "false"
 
+@RegTest2
 Scenario Outline: Home page default login
 Given User is on NetBanking landing page
 When User login into application with "<Username>" and  "<password>"
